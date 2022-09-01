@@ -1,0 +1,34 @@
+<a class="btn btn-danger back" [routerLink]="'/users/list'">Back</a>
+
+<div *ngIf="loadform">
+    
+<mat-card class="form">
+    <form [formGroup]="updateUserForm" (submit)="submitForm()">
+      <mat-card-title class="m-2">Update The User </mat-card-title>
+      <mat-card-content>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="userName" formControlName="userName">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Address</mat-label>
+            <input matInput placeholder="address" formControlName="address">
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Email</mat-label>
+            <input matInput placeholder="email" formControlName="email">
+          </mat-form-field>
+        </p>
+        <p>
+          <button mat-raised-button color="primary">Submit</button>
+        </p>
+      </mat-card-content>
+    </form>
+  </mat-card>
+  
+</div>

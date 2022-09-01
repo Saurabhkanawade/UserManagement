@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "userName": "Harshal Thombare",
+      "address": "Pune",
+      "email": "harshal.thombare@gmail.com",
+      "id": 1
+    },
+    {
+      "userName": "Saurabh Kanawade",
+      "address": "Vadgaon Landga",
+      "email": "saurabhkanawade30@gmail.com",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "userName": "Shailesh Karpe",
+      "address": "Pimplgaon Konzira",
+      "email": "shaileshkarpe2018@gmail.com"
+    },
+    {
+      "id": "4",
+      "userName": "Rushikesh Kandekar",
+      "address": "Dombivli",
+      "email": "rushikeshkandekar22@gmail.com"
+    },
+    {
+      "id": "6",
+      "userName": "Kartikesh Hase",
+      "address": "Ghulewali",
+      "email": "kartikeshhase33@gmail.com"
+    },
+    {
+      "id": "7",
+      "userName": "Balram Mohato",
+      "address": "Baramati",
+      "email": "balaram.mohato@crossasyst.com"
+    },
+    {
+      "id": "8",
+      "userName": "Uttam Singh",
+      "address": "Dombivli",
+      "email": "uttam.singh@crossasyst.com"
+    },
+    {
+      "id": "9",
+      "userName": "Tanveer Patel ",
+      "address": "Airoli",
+      "email": "tanveer.patel@crossasyst.com"
+    },
+    {
+      "id": "10",
+      "userName": "Aryan Singh",
+      "address": "Diva ",
+      "email": "aryan.singh@crossasyst.com"
+    },
+    {
+      "id": "11",
+      "userName": "Omkar Rout",
+      "address": "Sindhudurg",
+      "email": "omkar.rout@crossasyst.com"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

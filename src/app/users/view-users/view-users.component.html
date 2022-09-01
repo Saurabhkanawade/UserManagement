@@ -1,0 +1,14 @@
+        <a class="btn btn-danger back" [routerLink]="'/users/list'">Back</a>
+
+
+<h1 class="head">The Data of the User where id={{userId}}</h1>
+
+
+<mat-card class="mat-card" *ngIf="userDataById">
+        <mat-card-title>
+                <td class="data">{{userDataById.id}} </td>
+                <td class="data">{{userDataById.userName}}</td>
+        </mat-card-title>
+        <td class="data">{{userDataById.email}}</td><br>
+        <td class="data">{{userDataById.address}}</td>
+</mat-card>

@@ -1,0 +1,70 @@
+<mat-card class="background-card">
+  <mat-card-title> <h1 class="danger head">Total Users is <span
+        class="totaluser">{{dataSource.length}}</span></h1>
+  </mat-card-title>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="userName">
+      <th mat-header-cell *matHeaderCellDef> UserName</th>
+      <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+    </ng-container>
+
+    <!-- address Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+
+    <!-- email Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email | lowercase}} </td>
+    </ng-container>
+
+    <!-- Actions column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <a class="btn  btn-sm m-1"
+          [routerLink]="['/users/view',element.id]"><mat-icon>perm_identity</mat-icon></a>
+        <a class="btn  btn-sm m-1"
+          [routerLink]="['/users/edit',element.id]"><mat-icon>edit</mat-icon></a>
+        <a class="btn  btn-sm m-1"
+          [routerLink]="['/users/delete',element.id]"><mat-icon>delete</mat-icon></a>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</mat-card>
+
+
+<!-- 
+<div class="main-content">
+  <mat-list role="list" class="sidebar">
+    <mat-card class="mat-card m-3" role="listitem" *ngFor="let user of
+      userData , let i=index">
+      <div class="data">
+        <mat-card-title>
+          <span class="id">{{user.id}}</span>
+          <span class="name">{{user.userName}}</span>
+        </mat-card-title>
+        <span class="address">{{user.address}}</span>
+      </div>
+      <mat-card-actions>&nbsp; &nbsp;&nbsp;
+        
+      </mat-card-actions>
+    </mat-card>
+  </mat-list> -->

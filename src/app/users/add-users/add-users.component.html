@@ -1,0 +1,75 @@
+<div class="background">
+  <mat-card class="form">
+    <form [formGroup]="addUserForm" (submit)="submitForm()">
+      <mat-card-title class="m-2">Add New User </mat-card-title>
+      <mat-card-content><p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Id</mat-label>
+            <input matInput placeholder="id" formControlName="id">
+            <mat-error>
+              id is required
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="userName" formControlName="userName">
+            <mat-error *ngIf="addUserForm.controls['userName'].errors &&
+              addUserForm.controls['userName'].hasError('required')">
+              username is required
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['userName'].errors &&
+              addUserForm.controls['userName'].hasError('maxlength')">
+              max length should be 20 digits only
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['userName'].errors &&
+              addUserForm.controls['userName'].hasError('minlength')">
+              min length 5 digits
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>User Address</mat-label>
+            <input matInput placeholder="address" formControlName="address">
+            <mat-error *ngIf="addUserForm.controls['address'].errors &&
+              addUserForm.controls['address'].hasError('required')">
+              address is required
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['address'].errors &&
+              addUserForm.controls['address'].hasError('maxlength')">
+              max length should be 30 digits only
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['address'].errors &&
+              addUserForm.controls['address'].hasError('minlength')">
+              min length 5 digits
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" formControlName="email">
+            <mat-error *ngIf="addUserForm.controls['email'].errors &&
+              addUserForm.controls['email'].hasError('required')">
+              email is required
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['email'].errors &&
+              addUserForm.controls['email'].hasError('maxlength')">
+              max length should be 30 digits only
+            </mat-error>
+            <mat-error *ngIf="addUserForm.controls['email'].errors &&
+              addUserForm.controls['email'].hasError('minlength')">
+              min length 5 digits
+            </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <button mat-raised-button color="primary"
+            [disabled]="!addUserForm.valid">Submit</button>
+        </p>
+      </mat-card-content>
+    </form>
+  </mat-card>
+</div>
